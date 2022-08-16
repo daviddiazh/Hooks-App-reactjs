@@ -1,11 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { CounterWithCustomHook } from './01-useState/CounterWithCustomHook'
-import { HooksApp } from './HooksApp'
+// import { HooksApp } from './HooksApp'
+// import { CounterWithCustomHook } from './01-useState/CounterWithCustomHook'
+import { SimpleForm } from './02-useEffect/SimpleForm'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <CounterWithCustomHook />
+    <SimpleForm />
   </React.StrictMode>
 )

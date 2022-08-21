@@ -7,11 +7,12 @@ import ReactDOM from 'react-dom/client';
 // import { MultipleCustomHooks } from './03-examples/MultipleCustomHooks';
 // import { FocusInput } from './04-useRef/FocusInput';
 // import { Layout } from './05-useLayouEffect/Layout';
-import { Memorize } from './06-memos/Memorize';
+// import { Memorize } from './06-memos/Memorize';
+import { MemoHook } from './06-memos/MemoHook';
 import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Memorize />
+    <MemoHook />
   </React.StrictMode>
 )

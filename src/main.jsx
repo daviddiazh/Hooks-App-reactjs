@@ -9,11 +9,14 @@ import ReactDOM from 'react-dom/client';
 // import { Layout } from './05-useLayouEffect/Layout';
 // import { Memorize } from './06-memos/Memorize';
 // import { MemoHook } from './06-memos/MemoHook';
-import { CallbackHook } from './06-memos/CallbackHook';
+// import { CallbackHook } from './06-memos/CallbackHook';
+// import { Padre } from './07-tarea-memo';
 import './index.css';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <CallbackHook />
-  </React.StrictMode>
-)
+import './08-useReducer/intro-reducer';
+
+// ReactDOM.createRoot(document.getElementById('root')).render(
+//   <React.StrictMode>
+//     <Padre />
+//   </React.StrictMode>
+// )

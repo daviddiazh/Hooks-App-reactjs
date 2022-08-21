@@ -4,11 +4,12 @@ import ReactDOM from 'react-dom/client'
 // import { CounterWithCustomHook } from './01-useState/CounterWithCustomHook'
 //import { SimpleForm } from './02-useEffect/SimpleForm'
 //import { CustomHookForm } from './02-useEffect/CustomHookForm'
-import { MultipleCustomHooks } from './03-examples/MultipleCustomHooks'
+// import { MultipleCustomHooks } from './03-examples/MultipleCustomHooks'
+import { FocusInput } from './04-useRef/FocusInput'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <MultipleCustomHooks />
+    <FocusInput />
   </React.StrictMode>
 )

@@ -14,6 +14,7 @@ export const MemoHook = () => {
     const { counter, increment } = useCounter();
     const [ show, setShow ] = useState(true);
 
+    //useMemo( () => heavyStuffy(counter), [counter]);
     const memorizedValue = useMemo( () => heavyStuffy(counter), [counter]);
     // Con este Hook podemos memorizar un valor y evitar renderizados innecesarios que pueden ser pesados y que solo se haga ese renderizado cuando cambie el estado, ademas de poderle definir dependencias
 

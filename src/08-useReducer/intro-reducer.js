@@ -1,12 +1,12 @@
 
-const initialState = [{
+const initialStateREDUCER = [{
     id: 1,
     todo: 'Hacer tareas de ingles',
     done: false,
 }];
 
 
-const todoReducer = ( state = initialState, action = {} ) => {
+const todoReducer = ( state = initialStateREDUCER, action = {} ) => {
 
     if ( action.type === '[TODO] - AddTodo' ) return [ ...state, action.payload ]
 
@@ -24,6 +24,6 @@ const addTodoAction = {
     payload: newTodo,
 }
 
-let todo = todoReducer( initialState, addTodoAction );
+let todo = todoReducer( initialStateREDUCER, addTodoAction );
 
 console.log(todo)

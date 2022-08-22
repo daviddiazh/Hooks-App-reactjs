@@ -1,14 +1,9 @@
 import React, { useReducer } from 'react';
-import { todoReducer } from './todoReducer';
+import { TodoAdd, TodoList, todoReducer } from './';
 
-const initialState = [
+export const initialState = [
     {
         id: new Date().getTime(),
-        description: 'Estudiar React',
-        done: false
-    },
-    {
-        id: new Date().getTime() * 5,
         description: 'Estudiar Ingles',
         done: false
     }
@@ -18,6 +13,15 @@ export const TodoApp = () => {
     
     const [ todos, dispatch ] = useReducer( todoReducer, initialState );
 
+    const handleTodoAdd = (todo) => {
+        const action = {
+            type: '[TODO] - Add Todo',
+            payload: todo
+        }
+
+        dispatch( action );
+    }
+
     return (
         <>
             {/* useReducer */}
@@ -26,35 +30,14 @@ export const TodoApp = () => {
 
             <div className="row">
                 <div className="col-7">
-                    <ul className="list-group">
-                        {
-                            todos.map( todo => (
-                                <li key={ todo.id } className="list-group-item d-flex justify-content-between">
-                                    <span className="align-self-center">{todo.description}</span>
-                                    <button className="btn btn-danger">Borrar</button>
-                                </li>
-                            ))
-                        }
-                    </ul>
+                    <TodoList todos={ todos } />
                 </div>
                 
                 <div className="col-5">
                     <h4>Agregar TODO</h4>
                     <hr />
-                    <form>
-                        <input
-                            placeholder="Agrega tu tarea aquí"
-                            type="text"
-                            className="form-control"
-                        />
 
-                        <button
-                            type="submit"
-                            className="btn btn-primary mt-2"
-                        >
-                            Agregar
-                        </button>
-                    </form>
+                    <TodoAdd onNewTodo={ handleTodoAdd } />
                 </div>
             </div>
         </>
